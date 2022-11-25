@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/insobl/brain-games/issues"
   },
-  "homepage": "https://github.com/insobl/brain-games#readme"
+  "homepage": "https://github.com/insobl/brain-games#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
