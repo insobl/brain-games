@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import {userName} from '../src/cli.js';
 import readlineSync from 'readline-sync';
+import {checkAnswer} from '../src/index.js';
 var name =  userName();
 console.log(`Hello, ${name}!`);
 console.log('What is the result of the expression?');
@@ -24,10 +25,8 @@ var number1 = Math.floor(Math.random()*30+1),
         break;
     }
 const answer = readlineSync.question('Your answer: ');
-if (sum === Number(answer)){
-    console.log('Correct!');
-} else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${sum}'.\nLet's try again, ${name}!`)
+const result = checkAnswer(sum, answer, name)
+if (result === 'stop, wrong answer') {
     break;
 }
 if (i === 3){
