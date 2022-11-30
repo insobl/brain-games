@@ -10,8 +10,8 @@ for (var i=1; i <= 3; i++ ){
         number2 = randomizer(100)+1,
         NoD = NOD(number1, number2);
     console.log(`Question: ${number1} ${number2}`)
-    const userAnswer = readlineSync.question('Your answer: ');
-    const result = checkAnswer(NoD, userAnswer, name)
+    var userAnswer = readlineSync.question('Your answer: '),
+        result = checkAnswer(NoD, userAnswer, name);
     if (result === 'stop, wrong answer') {
     break;
 }

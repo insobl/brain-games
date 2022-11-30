@@ -9,15 +9,13 @@ for(var i = 1; i <= 3; i ++){
 var number = randomizer(21),
     correctAnswer = '';
     console.log(`Question: ${number}`)
-const answer = readlineSync.question('Your answer: ');
-
 if (number % 2 === 0 ){
     correctAnswer = 'yes';
 }  else if (number % 2 !== 0){
     correctAnswer = 'no';
 } 
-
-const result = checkAnswer(correctAnswer, answer, name)
+var answer = readlineSync.question('Your answer: '),
+    result = checkAnswer(correctAnswer, answer, name);
     if (result === 'stop, wrong answer') {
     break;
     }

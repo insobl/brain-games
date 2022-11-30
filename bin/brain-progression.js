@@ -10,9 +10,9 @@ for (var i = 1; i<=3; i++){
         firstElement = randomizer(20),
         missingPlace = randomizer(10)+1,
         d = randomizer(10)+1,
-        correctAnswer = progression(length, firstElement, missingPlace, d);   
-        const userAnswer = readlineSync.question('Your answer: ');
-        const result = checkAnswer(correctAnswer, userAnswer, name)
+        correctAnswer = progression(length, firstElement, missingPlace, d),   
+        userAnswer = readlineSync.question('Your answer: '),
+        result = checkAnswer(correctAnswer, userAnswer, name);
         if (result === 'stop, wrong answer') {
         break;
     }

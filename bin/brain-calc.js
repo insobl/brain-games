@@ -24,8 +24,8 @@ var number1 = randomizer(30)+1,
         sum = number1 * number2;
         break;
     }
-const answer = readlineSync.question('Your answer: ');
-const result = checkAnswer(sum, answer, name)
+var answer = readlineSync.question('Your answer: '),
+    result = checkAnswer(sum, answer, name);
 if (result === 'stop, wrong answer') {
     break;
 }
