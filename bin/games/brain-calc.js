@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import {userName} from '../src/cli.js';
+import {userName} from '../../src/cli.js';
 import readlineSync from 'readline-sync';
-import {checkAnswer, randomizer, congratulation} from '../src/index.js';
+import {checkAnswer, randomizer, congratulation} from '../../src/index.js';
 var name =  userName();
 console.log(`Hello, ${name}!`);
 console.log('What is the result of the expression?');

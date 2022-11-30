@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import {userName} from '../src/cli.js';
-import {checkAnswer, randomizer, congratulation, progression} from '../src/index.js';
+import {userName} from '../../src/cli.js';
+import {checkAnswer, randomizer, congratulation, progression} from '../../src/index.js';
 var name =  userName();
 console.log(`Hello, ${name}!`);
 console.log('What number is missing in the progression?');
