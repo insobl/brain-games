@@ -8,8 +8,8 @@ console.log('What number is missing in the progression?');
 for (var i = 1; i<=3; i++){
     var length = 10,
         firstElement = randomizer(20),
-        missingPlace = randomizer(10)+1,
-        d = randomizer(9)+1,
+        missingPlace = randomizer(9)+1,
+        d = randomizer(10)+1,
         correctAnswer = progression(length, firstElement, missingPlace, d),   
         userAnswer = readlineSync.question('Your answer: '),
         result = checkAnswer(correctAnswer, userAnswer, name);
