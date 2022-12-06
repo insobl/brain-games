@@ -31,22 +31,32 @@ export function congratulation(name, i){
     }
 } 
 export function progression (length, firstElement, missingPlace, d){
-    var progres = [firstElement], answer;
-    for (var i =1; i < length; i++){
-        if (i === missingPlace){
-            answer = progres[i-1]+d
-            progres.push('..') 
-        } else {
-        if (progres[i-1] !== '..'){
-            progres.push(progres[i-1]+d)
-        } else {
-            progres.push(progres[i-2]+2*d) 
+    var progres = [], answer;
+    if (missingPlace === 0){
+      progres.push('..');
+      progres.push(firstElement);
+      answer = firstElement - d;
+      for (var i =2; i < length; i++){ 
+            progres.push(progres[i-1] + d) 
         }
-    }
+    } else {
+        progres.push(firstElement);
+        for (var i =1; i < length; i++){ 
+            if (i === missingPlace){
+                answer = progres[i-1]+d
+                progres.push('..') 
+            } else {
+            if (progres[i-1] !== '..'){
+                progres.push(progres[i-1]+d)
+            } else {
+                progres.push(progres[i-2]+2*d) 
+            }
+        }
+        }   
     }
     console.log(`Question: ${progres.join(' ')}`)
     return answer
-    }
+}
 export function isItPrime(number){
 console.log(`Question ${number}`)
     for(var i= 2; i<number; i++){
