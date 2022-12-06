@@ -58,11 +58,17 @@ export function progression (length, firstElement, missingPlace, d){
     return answer
 }
 export function isItPrime(number){
-console.log(`Question: ${number}`)
-    for(var i= 2; i<number; i++){
-    if (number % i === 0){
-        return 'no'
+    console.log(`Question: ${number}`);
+    if (number === 1 || number === 0)  {
+        return 'no';
+    }else if(number === 2)  {
+        return 'yes';
+    } else   {
+        for(var x = 2; x < number; x++)  {
+          if(number % x === 0) {
+            return 'no';
+          }
+        }
+        return 'yes';
     }
-}
-return 'yes'
 }
