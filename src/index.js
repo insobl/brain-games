@@ -4,18 +4,20 @@ export function NOD(x, y) {
   return NOD(y, x % y);
 }
 export function checkAnswer(correctAnswer, userAnswer, name) {
-  if (Number.isFinite(userAnswer)) {
-    if (Number(correctAnswer) === Number(userAnswer)) {
+    if (Number.isFinite(userAnswer)) {
+      if (Number(correctAnswer) === Number(userAnswer)) {
+        console.log('Correct!');
+      } else {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+      return 'stop, wrong answer';
+      }
+      } else if (correctAnswer === userAnswer) {
       console.log('Correct!');
-    }
+    } else {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
     return 'stop, wrong answer';
-  } if (correctAnswer === userAnswer) {
-    console.log('Correct!');
+      }
   }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
-  return 'stop, wrong answer';
-}
 export function randomizer(number) {
   return Math.floor(Math.random() * number);
 }
