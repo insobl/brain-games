@@ -10,24 +10,24 @@ for (let i = 1; i <= 3; i += 1) {
   const number1 = randomizer(30) + 1;
   const number2 = randomizer(30) + 1;
   const operation = randomizer(3) + 1;
-  let sum = 0;
+  let resultCalc = 0;
   switch (operation) {
     case 1:
       console.log(`Question: ${number1} + ${number2}`);
-      sum = number1 + number2;
+      resultCalc = number1 + number2;
       break;
     case 2:
       console.log(`Question: ${number1} - ${number2}`);
-      sum = number1 - number2;
+      resultCalc = number1 - number2;
       break;
     case 3:
       console.log(`Question: ${number1} * ${number2}`);
-      sum = number1 * number2;
+      resultCalc = number1 * number2;
       break;
     default:
   }
   const answer = readlineSync.question('Your answer: ');
-  const result = checkAnswer(sum, answer, name);
+  const result = checkAnswer(resultCalc, answer, name);
   if (result === 'stop, wrong answer') {
     break;
   }
